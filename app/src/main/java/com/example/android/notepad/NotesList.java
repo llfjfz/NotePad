@@ -343,6 +343,7 @@ public class NotesList extends ListActivity {
         Intent intent = new Intent(null, Uri.withAppendedPath(getIntent().getData(), 
                                         Integer.toString((int) info.id) ));
         intent.addCategory(Intent.CATEGORY_ALTERNATIVE);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         menu.addIntentOptions(Menu.CATEGORY_ALTERNATIVE, 0, 0,
                 new ComponentName(this, NotesList.class), null, intent, 0, null);
     }
